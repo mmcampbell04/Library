@@ -1,0 +1,244 @@
+:root {
+  --white: #F5F5F5;
+  --gray: #898795;
+  --pink: #FF9FE5;
+  --black: #454355;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  
+}
+
+
+body {
+  background: var(--white);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: var(--black);
+  font-family: "Roboto Mono", Courier, monospace;
+  
+}
+
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* Add books input */
+.add-books{
+  width: 30%;
+  display: flex;
+  
+}
+
+form {
+  width: 100%;
+  padding: 9rem 3rem;
+  line-height: 1.7;
+  font-weight: bold;
+  background: var(--black);
+
+}
+
+.book-form > * {
+  margin: .5rem 0;
+  width: 100%;
+ 
+}
+
+label {
+  color: var(--white);
+}
+
+input {
+  width: 10rem;
+  padding: 0.25rem;
+  font-family: inherit;
+}
+
+.shelf-label {
+  margin-right: 0.5rem;
+}
+
+/* Change up Shelf dropdown */
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+
+}
+
+.select {
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  width: 100%;
+  min-width: 15ch;
+  max-width: 35ch;
+  border: 1px solid #777;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.rem;
+  cursor: pointer;
+  line-height: 1.1rem;
+  font-weight: bold;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  
+}
+
+.select::after {
+  content: " ";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: #777;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+select, .select:after {
+  grid-area: select;
+}
+
+.select:after {
+  justify-self: end;
+}
+
+
+button {
+  width: 100%;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: var(--pink);
+
+}
+
+
+.btn-add {
+  margin-top: 1.5rem;
+  padding: .75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  }
+
+
+
+/* library display */
+.display {
+  width: 70%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* title */
+.header {
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+
+
+/* books results */
+.results {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.25rem;
+}
+
+
+.read-results, .to-read-results, .total-results {
+  display: flex;
+  flex-direction: row;
+  padding: .75rem;
+  
+}
+
+.total-read, .total-to-read, .total-books {
+  margin-left: .5rem;
+
+}
+
+/* table  */
+.table-container {
+  height: 100%;
+  
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  
+}
+
+.table-title, .table-author {
+  width: 3rem;
+}
+
+.table-genre  {
+  width: 2.5rem;
+}
+
+.table-pages  {
+  width: 1.5rem;
+}
+
+.table-shelf {
+  width: 1.5rem;
+}
+
+.table-edit, .table-delete {
+  width: 0.5rem;
+}
+
+#table th {
+  background-color: var(--pink);
+  
+}
+
+tbody {
+  background: white;
+}
+
+th, td {
+  padding: .5rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  
+  
+
+}
+
+/* format table buttons  */
+
+.edit-btn, .delete-btn {
+  background: white;
+  width: min-content;
+  float: left;
+  
+}
+
+i {
+  color: black;
+}
